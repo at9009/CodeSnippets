@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>QD</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+- (void)_startAnimation {
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    UIImageView *animatImageView = [[UIImageView alloc] init];
+    animatImageView.frame = CGRectMake(0, 20, 320, 460);
+//    animatImageView.tag = kAnimatImageViewTag;
+    animatImageView.alpha = 0.0f;
+    animatImageView.backgroundColor = [UIColor blackColor];
+    animatImageView.image = [UIImage imageNamed:@"start.jpg"];
+    [self.window addSubview:animatImageView];
+    
+    [UIView animateWithDuration:4.0f
+                          delay:0.0f
+                        options:UIViewAnimationCurveEaseInOut
+                     animations:^(void) {
+                         animatImageView.alpha = 1.0f;
+                     }
+                     completion:^(BOOL isFinished) {
+                         [UIView animateWithDuration:1.0f
+                                               delay:0.0f
+                                             options:UIViewAnimationCurveEaseInOut
+                                          animations:^(void) {
+                                              animatImageView.alpha = 0.0f;
+                                          }
+                                          completion:^(BOOL isFinished) {
+                                              [animatImageView removeFromSuperview];
+                                          }];
+                     }];
+    [animatImageView release], animatImageView = nil;
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C6BEF605-7EEC-4B3D-8E85-F191CDD9D661</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>启动动画</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
