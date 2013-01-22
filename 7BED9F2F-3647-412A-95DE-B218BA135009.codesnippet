@@ -2,20 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>pra</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark -</string>
+	<string>//view
+NSLog(@"x:%f y:%f w:%f h:%f",self.frame.origin.x,self.frame.origin.y,self.frame.size.width,self.frame.size.height);
+//viewcontroller
+    NSLog(@"x:%f y:%f w:%f h:%f",self.view.frame.origin.x,self.view.frame.origin.y,self.view.frame.size.width,self.view.frame.size.height);</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F6EDE74D-FB7F-47C2-8D42-D5FE248B0AF5</string>
+	<string>7BED9F2F-3647-412A-95DE-B218BA135009</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>#pragma mark-</string>
+	<string>打印坐标</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

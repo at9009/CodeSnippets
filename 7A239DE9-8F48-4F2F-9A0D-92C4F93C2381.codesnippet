@@ -2,20 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>pra</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark -</string>
+	<string>   NSDate *select = [_picker date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy年MM月dd日"];
+    NSString *dateAndTime =  [dateFormatter stringFromDate:select];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F6EDE74D-FB7F-47C2-8D42-D5FE248B0AF5</string>
+	<string>7A239DE9-8F48-4F2F-9A0D-92C4F93C2381</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>#pragma mark-</string>
+	<string>获取日期</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

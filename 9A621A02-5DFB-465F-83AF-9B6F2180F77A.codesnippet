@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addelegate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+#pragma mark ADDOWNLOAD delegate
+-(void)finishedDownloadWithResults:(id)results
+{
+    NSString * responseStr = [[NSString alloc]initWithData:results encoding:NSUTF8StringEncoding];
+    NSDictionary *responseDic = [responseStr JSONValue];
+    NSLog(@"responseDic%@",responseDic);
+   NSLog(@"error_msg :%@",[responseDic objectForKey:@"error_message"]);
+    if([[responseDic objectForKey:@"result"]intValue] == 1)
+    {
+        [[TKAlertCenter defaultCenter]postAlertWithMessage:@"添加成功"];
+        
+    }
+    else
+        [[TKAlertCenter defaultCenter]postAlertWithMessage:[responseDic objectForKey:@"error_message"]];
+
+   
+
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9A621A02-5DFB-465F-83AF-9B6F2180F77A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>addownload</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

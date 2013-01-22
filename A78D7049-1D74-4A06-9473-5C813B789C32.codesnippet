@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>navgationbartitle</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>   self.view.backgroundColor = [UIColor colorWithPatternImage:IMG(@"bg_01")];
+        self.navigationItem.titleView = [BSTool setNavigationItemTitleViewWithText:@"维修查询"];
+        
+        
+        //设置导航栏左按钮
+        UIButton* backButton = [UIButton buttonWithType: 101]; // left-pointing shape!
+        [backButton addTarget: self action: @selector(back2RootView) forControlEvents: UIControlEventTouchUpInside];
+        [backButton setBackgroundImage:IMG(@"basis_btn_undo") forState:UIControlStateNormal];
+        [backButton setBackgroundImage:IMG(@"basis_btn_undo") forState:UIControlStateHighlighted];
+        UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+        self.navigationItem.leftBarButtonItem = backItem;
+        [backItem release];
+        //结束
+        
+        //设置导航栏右按钮
+        UIButton* btnMakePhone = [UIButton buttonWithType: UIButtonTypeCustom];
+        btnMakePhone.frame = CGRectMake(0, 0, 74, 30);
+        [btnMakePhone addTarget: self action: @selector(makeAphone) forControlEvents: UIControlEventTouchUpInside];
+        [btnMakePhone setBackgroundImage:IMG(@"comm_63") forState:UIControlStateNormal];
+        [btnMakePhone setBackgroundImage:IMG(@"comm_63") forState:UIControlStateHighlighted];
+        UIBarButtonItem* itemMakePhone = [[UIBarButtonItem alloc] initWithCustomView:btnMakePhone];
+        self.navigationItem.rightBarButtonItem = itemMakePhone;
+        [itemMakePhone release];
+        //结束
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A78D7049-1D74-4A06-9473-5C813B789C32</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>标题和背景和导航栏按钮</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

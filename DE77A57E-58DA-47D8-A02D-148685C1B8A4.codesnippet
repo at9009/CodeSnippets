@@ -3,19 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>pra</string>
+	<string>setheadvalue</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark -</string>
+	<string>    [_adDownLoad setHeaderValue:UUID forKey:@"uuid"];
+    [_adDownLoad setHeaderValue:Device_Token forKey:@"device_token"];
+    [_adDownLoad setHeaderValue:Member_ID forKey:@"member_id"];
+    
+    NSString *URL = [HOST stringByAppendingString:CARMANGER];
+    [_adDownLoad getResultsByURL:URL method:@"POST"];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F6EDE74D-FB7F-47C2-8D42-D5FE248B0AF5</string>
+	<string>DE77A57E-58DA-47D8-A02D-148685C1B8A4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>#pragma mark-</string>
+	<string>setHeadValue</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
